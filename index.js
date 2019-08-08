@@ -87,11 +87,11 @@
 
   let map = buildMap(NUM_ROWS, NUM_COLS);
 
-  const readline = require('readline');
+  const readline = require("readline");
   readline.emitKeypressEvents(process.stdin);
   process.stdin.setRawMode(true);
-  process.stdin.on('keypress', (str, key) => {
-      if (key.ctrl && key.name === 'c') {
+  process.stdin.on("keypress", (str, key) => {
+      if (key.ctrl && key.name === "c") {
         process.exit();
       } else {
         if (moveMapProcedures[key.name]) moveMapProcedures[key.name]();
